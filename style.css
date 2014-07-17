@@ -1,0 +1,441 @@
+@font-face {
+	font-family: MissionGothicThinItalic;
+	src: url('Mission_Gothic_Thin_Italic.otf');
+}
+
+@font-face {
+	font-family: MissionGothicBoldItalic;
+	src: url('Mission_Gothic_Bold_Italic.otf');
+}
+
+
+#bg {
+	background-image: url("images/mountainbanner.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 0% 20%;
+	margin: -8px -8px -8px;
+	height: 600px;
+}
+
+#nav {
+	font-family: MissionGothicThinItalic, sans-serif;
+	font-weight: bold;
+	background-color: #333333;
+	margin: 0 0 0 0;
+	padding: 40px;
+	position: fixed;
+	left: 11%;
+	z-index: 1;
+	top: 0px;
+}
+
+#nav ul{
+	padding: 0;
+	margin: 0;
+}
+
+#nav li {
+	float: left;
+	list-style-type: none;
+	color: white;
+}
+
+#list {
+	overflow: auto;
+}
+
+a:link{
+	text-decoration: none;
+	color: white;
+	-o-transition:.3s;
+  	-ms-transition:.3s;
+  	-moz-transition:.3s;
+  	-webkit-transition:.3s;
+}
+
+a:visited{
+	text-decoration: none;
+	color:white;
+}
+
+a:hover{
+	color: #7299b1;
+}
+
+body {
+	margin-bottom: 0;
+}
+
+#midcontent{
+	margin: 0 auto;
+	width: 56em;
+	height: 50em;
+}
+
+#bannertext{
+	font-family: MissionGothicBoldItalic, sans-serif;
+	font-size: 2em;
+	color: white;
+	margin: 0;
+	padding-top: 20%;
+	text-align: center;
+}
+
+#logo img{
+	text-align: center;
+	max-width: 60%;
+}
+
+#section1 {
+	font-family: MissionGothicThinItalic;
+	background-color: white;
+	margin-left: -8px;
+	margin-right: -8px;
+	position: relative;
+	border: 0;
+	padding: 30px 0 30px 0;
+	overflow: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#work {
+	width: 1030px;
+	margin: 0 auto;
+	height: 100%;
+	padding-left: auto;
+	padding-right: auto;
+	overflow: auto;
+	overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#work ul{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#work li {
+	float: left;
+	list-style-type: none;
+	margin: 5px;
+	margin-bottom: -1px;
+}
+
+#work h1{
+	font-family: MissionGothicThinItalic;
+	text-align: center;
+}
+.gallery-item {
+    height: auto;
+    float: left;
+    position: relative;
+}
+
+.gallery-item:first-child {
+    margin-right: 2.762430939%;
+}
+
+
+.gallery-item:hover .img-title {
+    /*opacity: 1;*/
+}
+
+.img-title {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    height: 97.5%;
+    width: 100%;
+    text-align: center;
+    opacity: .8;
+    display: none; /* comment this out for CSS hover */
+    background-color: white;
+    /*transition: all 0.5s ease;*/
+}
+
+.img-title h5 {
+    position: absolute;
+    color: black;
+    top: 33%;
+    width: 100%;
+    text-align: center;
+}
+
+#section2 {
+	font-family: MissionGothicThinItalic;
+	background-color: #333333;
+	margin-left: -8px;
+	margin-right: -8px;
+	position: relative;
+	border: 0;
+	padding: 80px 0 30px 0;
+}
+
+.sectioninner {
+	width: 85%;
+	margin: 0 auto;
+	height: 100%;
+	padding-left: auto;
+	padding-right: auto;
+	text-align: center;
+}
+
+#section2header {
+	color: white;
+	border-bottom: 4px double white;
+}
+
+#section2lower {
+	color: white;
+	overflow: auto;
+}
+
+#lefthalf {
+	float: left;
+	text-align: left;
+	width: 40%;
+	margin-left: 5em;
+	padding-bottom: 20px;
+}
+
+#lefthalf h2 {
+	margin-bottom: 0px;
+}
+
+.resumeblock dt{
+	padding-bottom: 5px;
+	font-size: 13pt;
+}
+
+#righthalf {
+	float: right;
+	text-align: left;
+	width: 40%;
+	margin-right: 5em;
+}
+
+#righthalf h2 {
+	margin-bottom: 0px;
+}
+
+
+.occupation {
+	margin-bottom: 0px;
+}
+
+.jobdate {
+	font-size: 8pt;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.jobdescription {
+	font-size: 11pt;
+	margin: 5px 0 0px;
+}
+
+.job {
+	overflow: auto;
+}
+
+#work ul{
+	margin: 0 auto;
+}
+
+#section3{
+	font-family: MissionGothicThinItalic;
+	background-color: white;
+	margin-left: -8px;
+	margin-right: -8px;
+	position: relative;
+	border: 0;
+	padding: 80px 0 30px 0;
+	overflow: auto;
+}
+
+#adobeicons {
+	width: 90%;
+}
+
+#adobeicons img{
+	width: 55px;
+	height: auto;
+}
+
+@media only screen and (max-width : 2000px){
+	#bg {
+		background-image: url("images/mountainbanner.jpg");
+		background-position: bottom;
+	}
+}
+
+@media only screen and (max-width : 1024px){
+	#work {
+		width: 835px;
+	}
+}
+
+/* Me */
+@media only screen and (max-width : 942px){
+	#lefthalf {
+		margin: auto;
+		padding-left: 10px;
+	}
+
+	#righthalf {
+		margin: auto;
+		padding-right: 10px;
+	}
+}
+
+/* 3 Columns */
+@media only screen and (max-width : 875px){
+	#bg {
+		height: 400px;
+	}
+
+	#work {
+		width: 660px;
+		margin: 0 auto;
+	}
+
+	#midcontent {
+		width: 600px;
+		height: 600px;
+	}
+
+	#bannertext {
+		font-size: 25px;
+	}
+
+}
+
+/* 2 Columns */
+@media only screen and (max-width : 650px){
+	#bg {
+		height: 300px;
+	}
+
+	#work {
+		width: 460px;
+		margin: 0 auto;
+	}
+
+	#midcontent {
+		width: 400px;
+		height: 500px;
+		padding-top: 50px;
+	}
+
+	#bannertext {
+		font-size: 20px;
+	}
+
+	#nav {
+		width: 100%;
+		left: 0%;
+		position: absolute;
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	#list {
+		max-width: 250px !important;
+		width: 100% !important;
+		margin: 0 auto !important;
+	}
+
+}
+
+
+
+@media only screen and (max-width : 500px){
+	#work {
+		width: 268px;
+	}
+
+	#midcontent {
+		width: 400px;
+		height: 500px;
+		padding-top: 50px;
+	}
+
+	#bannertext {
+		font-size: 20px;
+	}
+
+
+	#lefthalf {
+		float: none;
+		margin: 0 auto;
+		width: 80%;
+		padding-left: 0;
+	}
+
+	#righthalf {
+		float: none;
+		margin: 0 auto;
+		width: 80%;
+		padding-right: 0;
+	}
+
+	#education {
+		border-bottom: 1px solid white;
+		padding-bottom: 30px;
+	}
+
+	#nav {
+		width: 100%;
+		left: 0%;
+		position: absolute;
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	#list {
+		padding-left: 0;
+		padding-right: 0;
+	}
+/*
+
+	float: left;
+	text-align: left;
+	width: 40%;
+	margin-left: 5em;
+	padding-bottom: 20px;
+
+*/
+}
+
+/* Contact */
+
+
+
+/* iPhone Portrait */
+@media screen and (device-aspect-ratio: 40/71) {
+	#work {
+	width: 268px;
+	}
+
+	#midcontent {
+		width: 100px;
+		height: 500px;
+		padding-top: 50px;
+	}
+
+	#bannertext {
+		font-size: 20px;
+	}
+
+	#nav {
+		width: 100%;
+		left: 0%;
+		position: absolute;
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+}

@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Millionhari</title>
+	<link rel="stylesheet" href="style.css">
+	<script type ="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
+	<script>
+	//Fade in
+	$(document).ready(function(){
+		$('.gallery-item').hover( function() {
+        $(this).find('.img-title').fadeIn(300);
+    }, function() {
+        $(this).find('.img-title').fadeOut(100);
+    });
+
+	//Smooth Scroll
+	$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 500);
+        return false;
+      }
+    }
+  });
+
+});
+	</script>
+
+
+
+</head>
+<body>
+	<div id = "bg" data-type = "background" data-speed = "10">
+		<div id = "nav">
+			<ul id = "list">
+				<li><a href="#bannertext">Home</a>&nbsp;/&nbsp;</li>
+				<li><a href="#section1">Work</a>&nbsp;/&nbsp;</li>
+				<li><a href="#section2">Me</a>&nbsp;/&nbsp;</li>
+				<li><a href="#section3">Contact</a>&nbsp;/&nbsp;</li>
+				<li><a href="blog.html">Blog</a></li>
+			</ul>
+		</div>
+		<div id = "midcontent">
+			<h1 id = "bannertext">
+				<div id = "logo">
+					<img src="images/millionharilogo.png" alt="logo">
+				</div>
+				STAY HUNGRY, STAY HUMBLE
+			</h1>
+		</div>
+	</div>
+	<!-- Work Section -->
+		<div id = "section1">
+			<div id = "work">
+				<h1>Work</h1>
+					<ul>
+						<li class="gallery-item">
+							<a href="https://vimeo.com/83426110" target="_blank">
+      					 	<img src="images/joelmoriah.png">
+      					  	<figcaption class="img-title">
+      				      	<h5>Joel + Moriah Wedding</h5>    
+    					    </figcaption>
+    					    </a>
+  						</li>
+						<li class="gallery-item">
+							<a href="https://vimeo.com/80855070" target="_blank">
+      					 	<img src="images/cosmicmadness.png">
+      					  	<figcaption class="img-title">
+      				      	<h5>Cosmic Madness Promo</h5>    
+    					    </figcaption>
+    					    </a>
+  						</li>
+  						<li class="gallery-item">
+							<a href="https://vimeo.com/71292555" target="_blank">
+      					 	<img src="images/asirecap.png">
+      					  	<figcaption class="img-title">
+      				      	<h5>CPP 2012-2013 Recap</h5>    
+    					    </figcaption>
+    					    </a>
+  						</li>
+  						<li class="gallery-item">
+							<a href="https://vimeo.com/70653721" target="_blank">
+      					 	<img src="images/dannymaya.png">
+      					  	<figcaption class="img-title">
+      				      	<h5>Danny + Maya Pre-Wedding</h5>    
+    					    </figcaption>
+    					    </a>
+  						</li>
+  						<li class="gallery-item">
+							<a href="https://vimeo.com/66869521" target="_blank">
+      					 	<img src="images/broncofusion.png">
+      					  	<figcaption class="img-title">
+      				      	<h5>BroncoFusion 2012</h5>    
+    					    </figcaption>
+    					    </a>
+  						</li>
+  						<li class="gallery-item">
+							<a href="https://vimeo.com/57516562" target="_blank">
+      					 	<img src="images/christmasrus.png">
+      					  	<figcaption class="img-title">
+      				      	<h5>Christmas R Us</h5>    
+    					    </figcaption>
+    					    </a>
+  						</li>
+  						<li class="gallery-item">
+							<a href="https://vimeo.com/57416703" target="_blank">
+      					 	<img src="images/hvz.png">
+      					  	<figcaption class="img-title">
+      				      	<h5>HvZ</h5>    
+    					    </figcaption>
+    					    </a>
+  						</li>
+  						<li class="gallery-item">
+							<a href="https://vimeo.com/57404023" target="_blank">
+      					 	<img src="images/wotw.png">
+      					  	<figcaption class="img-title">
+      				      	<h5>Workout of the Week</h5>    
+    					    </figcaption>
+    					    </a>
+  						</li>
+  						<li class="gallery-item">
+							<a href="https://vimeo.com/53102793" target="_blank">
+      					 	<img src="images/bloom.png">
+      					  	<figcaption class="img-title">
+      				      	<h5>Bloom</h5>    
+    					    </figcaption>
+    					    </a>
+  						</li>
+  					</ul>
+  				</div>
+		</div>
+		<div id = "section2">
+			<div class="sectioninner">
+        <div id="section2header">
+				  <h1>Hello! My name is Michael Million Hari.</h1>
+          <h5>(Yes, that's my middle name)</h5>
+			  </div>
+        <div id="section2lower">
+          <div id="lefthalf">
+            <h2>Skills</h2>
+              <dl class = "resumeblock">
+                <dt>Videography</dt>
+                <dt>Photography</dt>
+                <dt>Motion Graphics</dt>
+                <dt>Web Development</dt>
+                <dt>2D/3D Animation</dt>
+                <dt>Graphic Design</dt>
+              </dl>
+              <hr>
+            <h2>Known Tools of the Trade</h2>
+            <br>
+              <div id ="adobeicons">
+                <img src="images/adobeaftereffects.png" title="After Effects">
+                <img src="images/adobeaudition.png" title="Audition">
+                <img src="images/adobeillustrator.png" title="Illustrator">
+                <img src="images/adobelightroom.png" title="Lightroom">
+                <img src="images/adobephotoshop.png" title="Photoshop">
+                <img src="images/adobepremiere.png" title="Premiere Pro">
+              </div>
+              <br>
+              <hr>
+            <h2>Education</h2>
+              <div class="job">
+                <div id="education">
+                  <h3 class = "occupation">California Polytechnic University</h3>
+                  <h5 class = "jobdate">Expected to graduate in 2016 | Bachelor of Science in Business Administration, Computer Information System</h5>
+                </div>
+              </div>
+          </div>
+
+          <div id="righthalf">
+            <h2>Experience</h2>
+              <div class="job">
+                <h3 class = "occupation">Gas Creative Group</h3>
+                <h5 class = "jobdate">November 2011 - Present | Multimedia Developer</h5>
+                <p class = "jobdescription">Worked on everything from videography, photography, to animations (2D/3D). Collaborate alongside graphic designers, web developers, and writers to market events and programs for Cal Poly Pomona.</p>
+              </div>
+              <div class="job">
+                <h3 class = "occupation">Concept Pixels</h3>
+                <h5 class = "jobdate">January 2011 - September 2013 | Lead Multimedia Developer</h5>
+                <p class = "jobdescription">Created content for events ranging from 50-500+ people. Gave creative direction and led the photography and videography aspect of the company. Also hosted an annual toy drive for the less fortunate at an event called "Christmas R' Us".</p>
+              </div>
+              <div class="job">
+                <h3 class = "occupation">Freelancer</h3>
+                <h5 class = "jobdate">November 2011 - Present</h5>
+                <p class = "jobdescription">Worked with people to create different forms of multimedia such as websites, lyric videos, wedding videos, motion graphics, and designs.</p>
+              </div>
+              <br>
+              <hr>
+            <h2>Fun Facts</h2>
+            <dl class = "jobdescription">
+                <dt><a href = "https://www.youtube.com/watch?v=Su1YLAjty-U" target="_blank">-I created a viral video with over 10 million views</a></dt>
+                <dt>-Favorite food: Chinese</dt>
+                <dt>-Bilingual: English and Indonesian</dt>
+                <dt>-Favorite Combo: 5D Mk II + 35mm f/1.4 + 85mm f/1.8</dt>
+                <dt>-Currently learning Javascript</dt>
+              </dl>
+          </div>
+        </div>
+  		</div>
+  	</div>
+    <div id="section3">
+      <div class="sectioninner">
+        <h1>Contact</h1>
+          <h3>E: mike@millionhari.com | IG: millionhari | T: millionhari</h3>
+      </div>
+    </div>
+</body>
+</html>
