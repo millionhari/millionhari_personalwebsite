@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+	<!-- Style options -->
+	<style type="text/css">
+		body {
+			color: {text:Font Color};
+			background-color: {text:Background Color};
+		}
+
+		a:link,
+		a:visited {
+			text-decoration: none;
+			transition: color 0.2s ease;
+			color: {text:Link Color};
+		}
+
+		a:hover {
+			text-decoration: none;
+			color: {text:Link Hover Color};
+		}
+
+		.right .avatar img {
+			border-radius: {select:Avatar style};
+		}
+	</style>
+
+	<!-- Settings -->
+	<meta name="text:Background Color" content="#fff" />
+	<meta name="text:Font Color" content="#444" />
+	<meta name="text:Link Color" content="#1a1a1a" />
+	<meta name="text:Link Hover Color" content="#bf32b7" />
+	<meta name="select:Avatar style" content="50%;" title="Circle">
+	<meta name="select:Avatar style" content="0;" title="Square">
+	<meta name="text:Banner Link" content="" />
+	<meta name="text:Banner Image Link" content="" />
+	<meta name="text:Footer Text" content="" />
+
+	<!-- Social buttons -->
+
+	<meta name="text:Username on Facebook" content="" />
+	<meta name="text:Username on Twitter" content="" />
+	<meta name="text:Username on Vkontakte" content="" />
+	<meta name="text:Username on Instagram" content="" />
+	<meta name="text:Username on Flickr" content="" />
+	<meta name="text:Username on Google Plus" content="" />
+	<meta name="text:Username on Vimeo" content="" />
+	<meta name="text:Username on YouTube" content="" />
+	<meta name="text:Twitter post count" content="1" />
+    <meta name="text:Instagram access token" content="" />
+    <meta name="text:Disqus shortname" content="" />
+
+    <!-- Show / hide blocks -->
+
+    <meta name="if:Display tweets" content="0">
+    <meta name="if:Display instagram shots" content="0">
+    <meta name="if:Display flickr photos" content="0">
+    <meta name="if:Display banner" content="0">
+    <meta name="if:Display Archive" content="1">
+    <meta name="if:Display random post" content="1">
+    <meta name="if:Display RSS" content="1">
+
+	<!-- Basic Page Needs -->
+	<meta charset="utf-8">
+	<title>{Title}</title>
+	<link rel="alternate" type="application/rss+xml" href="{RSS}">
+	<link rel="shortcut icon" href="{Favicon}">
+	{block:Description}
+    	<meta name="description" content="{MetaDescription}" />
+    {/block:Description}
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="http://static.tumblr.com/n0yswly/KGKn6fw4p/base.css">
+	<link rel="stylesheet" href="http://static.tumblr.com/n0yswly/Rbpn6fw5p/skeleton.css">
+	<link rel="stylesheet" href="http://static.tumblr.com/n0yswly/Mtcn6i23u/layout.css">
+	
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://static.tumblr.com/n0yswly/CJrn4eced/colorbox.css">
+
+	<!-- Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic' rel='stylesheet' type='text/css'>
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Scripts -->
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://static.tumblr.com/cbn1ez0/5jIn2w558/jflickrfeed.min.js"></script>
+	<script src="http://static.tumblr.com/n0yswly/heun4cb6u/jquery.photoset-grid.js"></script>
+	<script src="http://static.tumblr.com/n0yswly/9gnn4e9nn/jquery.colorbox-min.js"></script>
+
+    <script type="text/javascript">
+    	var kosmos = window.kosmos || {};
+
+		kosmos.instagramToken = '{text:Instagram access token}',
+		kosmos.flickrId = '{text:Username on Flickr}',
+		kosmos.displayInsta = false,
+		kosmos.displayFlickr = false;
+
+    	{block:ifDisplayinstagramshots}
+    		kosmos.displayInsta = true;
+    	{/block:ifDisplayinstagramshots}
+    	{block:ifDisplayflickrphotos}
+    		kosmos.displayFlickr = true;
+    	{/block:ifDisplayflickrphotos}
+    </script>
+    <style type="text/css">
+    	{CustomCSS}
+    </style>
+</head>
+<body>
+	<div class="container">
+		<div class="sixteen columns">
+			<div id = "bg" data-type = "background" data-speed = "10">
+		<div id = "midcontent">
+			<h1 id = "bannertext">
+				<div class="header">
+				<a href="http://millionhari.com"><img src="http://millionhari.com/images/millionharilogodarkgray.png" alt="logo"></a>
+			</div>
+			</h1>
+		</div>
+	</div>
+	        <div id = "nav">
+			<ul id = "list">
+				<li><a href="http://millionhari.com/#bannertext">Home</a>&nbsp;/&nbsp;</li>
+				<li><a href="http://millionhari.com/#section1">Work</a>&nbsp;/&nbsp;</li>
+				<li><a href="http://millionhari.com/#section2">Me</a>&nbsp;/&nbsp;</li>
+				<li><a href="http://millionhari.com/#section3">Contact</a>&nbsp;/&nbsp;</li>
+				<li><a href="http://blog.millionhari.com">Blog</a></li>
+			</ul>
+		</div>
+			
+			<div class="navigation">
+				<ul>
+                    {block:HasPages}
+                    {block:Pages}
+                    <li> <a href="{URL}">{Label}</a></li>
+                    {/block:Pages}
+                    {/block:HasPages}
+					{block:ifDisplayArchive}
+                    <li><a href="/archive">Archive</a></li>
+                    {/block:ifDisplayArchive}
+                    {block:ifDisplayRandomPost}
+                    <li><a href="/random">Random post</a></li>
+                    {/block:ifDisplayRandomPost}
+                    {block:ifDisplayRSS}
+                    <li><a href="{RSS}">RSS</a></li>
+                    {/block:ifDisplayRSS}
+                    {block:SubmissionsEnabled}
+                    <li> <a href="/submit">{SubmitLabel}</a></li>
+                    {/block:SubmissionsEnabled}
+                    {block:AskEnabled}
+                    <li> <a href="/ask">{AskLabel}</a></li>
+                    {/block:AskEnabled}
+				</ul>
+			</div>
+			<select class="navigationSelect" onchange="window.open(this.options[this.selectedIndex].value,'_top')"> 
+				{block:HasPages}
+				{block:Pages}
+				<option value="{URL}">{Label}</option>
+				{/block:Pages}
+				{/block:HasPages}
+				{block:ifDisplayRandomPost}
+				<option value="/random">Random post</option>
+				{/block:ifDisplayRandomPost}
+				{block:ifDisplayArchive}
+				<option value="/archive">Archive</option>
+                {/block:ifDisplayArchive}
+				{block:ifDisplayRSS}
+				<option value="{RSS}">RSS</option>
+				{/block:ifDisplayRSS}
+				{block:SubmissionsEnabled}
+				<option value="/submit">{SubmitLabel}</option>
+				{/block:SubmissionsEnabled}
+				{block:AskEnabled}
+				<option value="/ask">{AskLabel}</option>
+				{/block:AskEnabled} 
+			</select>
+		</div>
+		<!--  right block -->
+		<div class="four columns sidebar">
+			<div class="right">
+				<div class="avatar">
+					<a href="{BlogURL}">
+						<img src="{PortraitURL-128}" alt="Avatar" width="128px;">
+					</a>
+				</div>
+				<div class="description">
+					<p>{Description}</p>
+				</div>
+				<div class="socialIcons">
+					<ul>
+			        {block:IfUsernameOnFacebook}
+			            <li><a href="http://www.facebook.com/{text:Username on Facebook}"><i class="fa fa-facebook"></i></a></li>
+					{/block:IfUsernameOnFacebook}
+			        {block:IfUsernameOnTwitter}
+			            <li><a href="http://www.twitter.com/{text:Username on Twitter}"><i class="fa fa-twitter"></i></a></li>
+					{/block:IfUsernameOnTwitter}
+			        {block:IfUsernameOnVkontakte}
+			            <li><a href="http://www.vk.com/{text:Username on Vkontakte}"><i class="fa fa-vk"></i></a></li>
+					{/block:IfUsernameOnVkontakte}
+			        {block:IfUsernameOnInstagram}
+			            <li><a href="http://www.instagram.com/{text:Username on Instagram}"><i class="fa fa-instagram"></i></a></li>
+					{/block:IfUsernameOnInstagram}
+			        {block:IfUsernameOnFlickr}
+			            <li><a href="http://www.flickr.com/{text:Username on Flickr}"><i class="fa fa-flickr"></i></a></li>
+					{/block:IfUsernameOnFlickr}
+			        {block:IfUsernameOnGooglePlus}
+			            <li><a href="https://plus.google.com/{text:Username on Google Plus}"><i class="fa fa-google-plus"></i></a></li>
+					{/block:IfUsernameOnGooglePlus}
+			        {block:IfUsernameOnVimeo}
+			            <li><a href="https://vimeo.com/{text:Username on Vimeo}"><i class="fa fa-vimeo-square"></i></a></li>
+					{/block:IfUsernameOnVimeo}
+			        {block:IfUsernameOnYoutube}
+			            <li><a href="https://youtube.com/user/{text:Username on Youtube}"><i class="fa fa-youtube"></i></a></li>
+					{/block:IfUsernameOnYoutube}
+					</ul>
+				</div>
+				<div class="sidebarBlock search">
+					<form action="/search" method="get">
+					    <input type="text" name="q" value="{SearchQuery}" placeholder="Search"/>
+					</form>
+				</div>
+				{block:ifDisplayBanner}
+				<div class="sidebarBlock banner">
+					<a href="{text:Banner link}" target="_blank">
+						<img src="{text:Banner Image Link}" alt="banner">
+					</a>
+				</div>
+				{/block:ifDisplayBanner}
+				{block:ifDisplayInstagramShots}
+					<div class="sidebarBlock instagram">
+						<div class="sidebarBlockTitle">Instagoods</div>								
+						<ul class="sidebarBlockPics"></ul>
+					</div>
+				{/block:ifDisplayInstagramShots}
+				{block:ifDisplayFlickrPhotos}
+					<div class="sidebarBlock flickr">								
+						<div class="sidebarBlockTitle">Flickr Photos</div>								
+						<ul class="sidebarBlockPics"></ul>
+					</div>
+				{/block:ifDisplayFlickrPhotos}
+				{block:ifDisplayTweets}
+				    <div class="sidebarBlock tweets">
+				        <div class="sidebarBlockTitle">Tweets</div>
+				        <div id="tweets"></div>
+				    </div>
+
+				    <script type="text/javascript">
+				        function recent_tweets(data) {
+				            for (i=0; i<{text:Twitter post count}; i++) {
+				                document.getElementById("tweets").innerHTML =
+				                    document.getElementById("tweets").innerHTML +
+				                    '<a href="http://twitter.com/{text:Username on Twitter}/status/' +
+				                    (data[i].id_str ? data[i].id_str : data[i].id) +
+				                    '"><div class="content">' + data[i].text +
+				                    '</div></a>';
+				            }
+				        }
+
+				    </script>
+				{/block:ifDisplayTweets}
+			</div>
+		</div>
+		<div class="twelve columns">
+			<div class="left">
+			    {block:Posts}
+			    <div class="article">
+			    	<div class="innerArticle">
+			        {block:Text}
+			        <div class="text inner">
+			            {block:Title}<h3 class="heading"><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+			            {Body}
+			        {/block:Text}
+
+			        {block:Photo}
+			        <div class="photo inner">
+			            {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" />{LinkCloseTag}
+			            {block:Caption}{Caption}{/block:Caption}
+			        {/block:Photo}
+			        
+					{block:Photoset}
+					  <div class="photoset inner" data-layout="{PhotosetLayout}" data-id="photoset{PostID}">
+					    {block:Photos}
+					      <img src="{PhotoURL-500}"
+					        {block:HighRes}data-highres="{PhotoURL-HighRes}"{/block:HighRes}
+					        {block:Caption}alt="{Caption}"{/block:caption} />
+					    {/block:Photos}
+
+					  <div class="photosetCaption">
+					  {block:Caption}
+					    {Caption}
+					  {/block:caption}
+					  </div>
+					{/block:Photoset}
+
+			        {block:Quote}
+			        <div class="quote inner">
+			            <blockquote>{Quote}</blockquote>
+			            {block:Source}<cite> &mdash; {Source} </cite>{/block:Source}
+			        {/block:Quote}
+
+			        {block:Link}
+			        <div class="link inner">
+			            <h3 class="heading"><a href="{URL}">{Name}</a></h3>
+			            {block:Description}{Description}{/block:Description}
+			        {/block:Link}
+
+			        {block:Chat}
+			        <div class="chat inner">
+			        	<h3><a href="{URL}">{Title}</a></h3>
+			            <ul>
+			                {block:Lines}<li class="{Alt}"><p>{block:Label}<strong>{Label}</strong>{/block:Label} {Line} </p></li>{/block:Lines}
+			            </ul>
+			        {/block:Chat}
+
+			        {block:Audio}
+			        <div class="audio inner">
+			            {block:TrackName}<h3 class="heading"><a href="{Permalink}">{TrackName}</a> {block:Caption}{Caption}{/block:Caption}</h3>{/block:TrackName}
+			            {block:AlbumArt}<img src="{AlbumArtURL}" width="500" height="500"/>{/block:AlbumArt}
+			            {AudioPlayerBlack}
+			        {/block:Audio}
+
+			        {block:Video}
+			        <div class="video inner">
+			            {Video-700}
+			            {block:Caption}{Caption}{/block:Caption}
+			        {/block:Video}
+
+			        {block:Answer}
+			        <div class="answer inner">
+			            <h3 class="heading">{Question}</h3>
+			            <div class="user"><img src="{AskerPortraitURL-96}"/><p>{Asker}</p></div>
+			            {Answer}
+			        {/block:Answer}
+			        </div>
+
+			        {block:Date}
+			        <div class="tags">
+			            {block:HasTags}
+			            <ul class="tags">
+			                {block:Tags}<li>#<a href="{TagURL}">{Tag}</a> </li>{/block:Tags}
+			            </ul>
+			            {/block:HasTags}
+			        </div>
+                    <div class="bottom-article">
+                        <div class="date">
+                            <a href="{Permalink}"><time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{DayOfMonth} {Month} {Year}</time></a>
+                            {block:NoteCount} | <a class="notecount" href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}
+
+                        </div>
+                        <div class="links">
+                            {ReblogButton}{LikeButton}
+                        </div>
+                        {block:PermalinkPage}
+                    
+                        {block:IfDisqusShortname}
+                            <div id="disqus_thread"></div>
+							<script type="text/javascript">
+							    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+							    var disqus_shortname = '{text:Disqus shortname}'; // Required - Replace <example> with your forum shortname
+
+							    /* * * DON'T EDIT BELOW THIS LINE * * */
+							    (function() {
+							        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+							        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+							        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+							    })();
+							</script>
+							<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                        {/block:IfDisqusShortname}
+
+                        {block:PostNotes}
+                        <div id="notes">
+                            {PostNotes}
+                        </div>
+                        {/block:PostNotes}
+                        {/block:PermalinkPage}
+                    </div>
+			        {/block:Date}
+			    	</div>
+			     </div>
+			    {/block:Posts}
+			    {block:Pagination}
+			    <nav id="pagination">
+			        <ul>
+			            {block:PreviousPage}<li><a href="{PreviousPage}">Previous page</a></li>{/block:PreviousPage}
+			            {block:NextPage}<li><a href="{NextPage}">Next page</a></li>{/block:NextPage}
+			        </ul>
+			    </nav>
+			    {/block:Pagination}
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div class="sixteen columns">
+					<p>{text:Footer text}</p>
+					<p><a href="http://millionhari.com">www.millionhari.com</a></p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$('.photoset').photosetGrid({
+		  highresLinks: true,
+		  rel: 'photoset-gallery',
+		  gutter: '5px',
+
+		  onComplete: function(){
+		    $('.photoset').attr('style', '');
+		    $('.photoset a').colorbox({
+		      photo: true,
+		      scalePhotos: true,
+		      maxHeight:'90%',
+		      maxWidth:'90%'
+		    });
+		    $('.photosetCaption a').attr('class','');
+		  }
+		});
+	</script>
+	<script type="text/javascript" src="http://static.tumblr.com/n0yswly/NVtn3tue8/scripts.js"></script>
+	<script type="text/javascript" src="/tweets.js"></script>
+<!-- End Document -->
+</body>
+</html>
