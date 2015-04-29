@@ -1,0 +1,45 @@
+body {
+  font-family: 'Lato', sans-serif !important;
+}
+
+.row {
+  margin: 0 !important;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 700 !important;
+}
+
+.header-jumbo {
+  font-weight: 700;
+  font-style: italic;
+  height: 600px;
+  text-align: center;
+  background-image: url('../img/mountainbanner.jpg');
+  background-size: cover;
+  margin: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: relative;
+  padding-top: 10% !important;
+}
+
+.header-jumbo h2 {
+  color: white;
+}
+
+.header-logo {
+  width: 45%;
+}
+
+.about-me-right {
+  text-align: left;
+}
+
+.about-me-left img {
+  width: 70%;
+  border-radius: 50%;
+}
