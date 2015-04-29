@@ -1,0 +1,482 @@
+// General Stylesheet
+// v. 1.0
+
+// Global
+
+body {
+	font-family: $helvetica;
+	font-size: 11px;
+	letter-spacing: 0.05em;
+
+	a {
+		color: inherit;
+	}
+}
+
+.valign {
+	@include vertical-align;
+}
+
+// Head
+
+.flash-bar {
+	background: #000;
+	width: 100%;
+	height: ($bar-height - 10px);
+
+	font-family: $montserrat;
+	text-transform: uppercase;
+	color: $gold;
+}
+
+.user-login-head {
+	float: right;
+	display: inline-block;
+
+	& span:first-child {
+		margin-right: 20px;
+	}
+}
+
+.info-bar {
+	background: #f1f1f1;
+	width: 100%;
+	height: $bar-height + 10px;
+
+}
+
+.country-tag {
+	
+
+	& ul {
+		margin-bottom: 0 !important;
+		margin-left: 0 !important;
+		line-height: normal;
+	}
+
+	& li {
+		display: inline-block;
+		margin-right: 10px;
+		font-size: 11px;
+		vertical-align: middle;
+	}
+}
+
+//  Search
+.search-container {
+	position: absolute;
+	margin-top: -5px;
+	right: -70px;
+	float: right;
+}
+
+input.search_input{
+	height: 30px;
+	width: 180px;
+}
+
+.search {
+	box-sizing: border-box; 
+
+	button {
+		background: none;
+	}
+}
+.search_label {
+	display: none;
+}
+
+.search_button {
+	color: black;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top: -6.5px;
+	font-size: 13px;
+}
+
+button.search_button {
+		padding-right: 1em;
+		padding-top: 0.9rem;
+	}
+
+
+// Shopping Bag
+
+img.shopping-icon {
+	width: 50px;
+	position: absolute;
+}
+
+.shopping-bag-container {
+	float: right;
+	text-transform: uppercase;
+}
+
+a.bag-quantity {
+	background: $gold;
+	padding: 4px 10px 4px 10px;
+	margin-left: 15px;
+}
+
+a.bag-quantity:hover {
+	background: black;
+	color: $gold;
+}
+
+
+// Logo 
+.main-logo {
+	max-width: 250px;
+	margin: 1.5em auto;
+}
+
+// Main Navigation
+nav.main-navigation {
+	text-transform: uppercase;
+	text-align: center;
+	margin: 5px auto;
+	background: transparent;
+
+
+	li {
+		text-decoration: none;
+		margin-right: 15px;
+		font-size: 11px;
+	}
+}
+
+section.large-nav {
+	max-width: 980px;
+	margin: 0 auto;
+
+	li {
+		display: inline-block;
+	}
+}
+
+nav.mobile-navigation {
+	display: none;
+}
+
+
+
+// Trending Section
+
+.trending {
+	padding-left: 0.9375rem;
+}
+
+.trending-head {
+	background: #000;
+	height: 40px;
+	color: #fff;
+	text-align: center;
+
+	& > h3 {
+		color: #fff;
+		font-size: 1.4em;
+		font-family: $montserrat;
+		text-transform: uppercase;
+	}
+}
+
+.trending-items {
+
+	li {
+		list-style: none;
+		background: #f1f1f1;
+		font-family: $montserrat;
+		margin-left: -18px;
+		margin-top: 2px;
+		padding: 15px;
+	}
+
+}
+
+.trending-num {
+	font-size: 22px;
+	vertical-align: top;
+	padding: 0 6px;
+	width: 25px;
+}
+
+#slider {
+	padding-right: 0.9375rem;
+	margin-top: 0.2rem;
+	margin-bottom: 0.5rem;
+}
+
+
+//	Featured Item Slider
+#item-slider-wrapper{
+	padding: 20px;
+	overflow: auto;
+	border-bottom: 1px solid black;
+}
+
+.arrows {
+	z-index: -1;
+	position: relative;
+	overflow-x: inherit;
+	text-align: center;
+	top: 11em;
+}
+
+img.arrowleft {
+	float: left;
+}
+
+img.arrowright {
+	float: right;
+}
+
+#item-slider-wrapper-last {
+	padding: 20px;
+	overflow: auto;
+	padding-bottom: 8em;
+}
+
+#item-slider-wrapper h1, #item-slider-wrapper-last h1 {
+	font-family: $montserrat;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 2em;
+	letter-spacing: 1.5px;
+	// padding-bottom: 2em;
+}
+
+.featured-item-slider {
+	text-align: center;
+}
+
+.featured-item-slider-scent {
+	padding-bottom: 20px;
+}
+
+.featured-item-slider-trending-name {
+	font-family: $montserrat;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.featured-item-slider-trending-brand {
+	font-family: $montserrat;
+	font-weight: bold;
+	font-size: .8em;
+	text-transform: uppercase;
+}
+
+.featured-item-slider-gender {
+	font-family: $montserrat;
+	font-weight: bold;
+	font-size: .6em;
+	color: $greytext;
+	text-transform: uppercase;
+}
+
+.featured-item-slider-prices-wrapper {
+	margin: 0 auto;
+	max-width: 100px;
+}
+
+.featured-item-slider-price {
+	font-family: $montserrat;
+	float: left;
+	color: $gold;
+}
+
+.featured-item-slider-msrp {
+	font-family: $montserrat;
+	float: right;
+	text-decoration: line-through;
+	color: $greytext;
+}
+
+//	Loyalty box
+#loyalty-box-wrapper {
+	padding-bottom: 9em;
+}
+
+.loyalty-box-inner {
+	width: 80%;
+	text-align: center;
+	margin: 20px;
+	background-color: rgba(255,255,255,0.9); 
+	height: 296px;
+	padding-top: 20px;
+	text-transform: uppercase;
+	position: relative;
+}
+
+img.loyalty-box {
+	width: 85%;
+	position: absolute;
+	z-index: -1;
+	opacity: .9;
+}
+
+.loyalty-box-title {
+	font-family: $montserrat;
+}
+
+.loyalty-box-underline {
+	padding: .8em;
+	margin: 0 auto;
+	width: 4em;
+	border-bottom: 1px solid black;
+}
+
+.loyalty-box-text {
+	font-family: $helvetica;
+	padding: 16px;
+	text-transform: none;
+	line-height: 2em;
+}
+
+.loyalty-box-button {
+	font-family: $montserrat;
+	background-color: black;
+	position: absolute;
+	bottom: 70px;
+	text-align: center;
+	font-size: 10px;
+	text-transform: uppercase;
+	padding: 10px 25px 10px 25px;
+	margin: -55px;
+}
+
+.loyalty-box-button:hover {
+	background-color: $gold;
+
+}
+
+//	Brand List
+.brand-lists h3 {
+	font-family: $montserrat;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.3em;
+	padding-bottom: 1em;
+}
+
+.brand-list {
+	font-family: $montserrat;
+	text-transform: uppercase;
+	font-size: 10px;
+	letter-spacing: 1px;
+
+	li {
+		list-style: none;
+		padding-bottom: 5px;
+	}
+
+}
+
+img.brand-list-icons {
+	padding-bottom: 3em;
+	}
+
+//	Newsletter
+#newsletter-bar {
+	overflow: auto;
+	background-color: black;
+	padding-top: 1em;
+	padding-bottom: 1em;
+
+	h1 {
+		font-family: $montserrat;
+		color: white;
+		font-size: 25px;
+		text-align: center;
+	}
+
+	h3 {
+		font-family: $montserrat;
+		color: white;
+		font-size: 10px;
+		text-align: center;
+	}
+}
+
+#buttonwrapper {
+	margin-top: 30px;
+}
+
+#email {
+	font-family: $montserrat;
+	padding-left: 5px;
+	height: 2.5em;
+	width: 70%;
+	border: 0;
+}
+
+#submit-button {
+	font-family: $montserrat;
+	border: 0;
+	height: 2.66em;
+	width: 25%;
+	background-color: $gold;
+	color: white;
+	text-transform: uppercase;
+}
+
+//	Footer
+.footer-section {
+	padding-top: 5em;
+	font-family: $helvetica;
+	list-style: none;
+	font-size: 12px;
+	letter-spacing: 1px;
+	line-height: 30px;
+
+	img {
+		padding-top: 5px;
+		padding-right: 3px;
+	}
+}
+
+.footer-section-title {
+	font-family: $montserrat;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+//	Copyright
+#copyright {
+	font-family: $montserrat;
+	text-transform: uppercase;
+	font-size: 10px;
+	letter-spacing: 2px;
+	text-align: center;
+	padding: 1.5em;
+}
+
+//	Hover
+a:hover {
+	color: $gold;
+}
+
+.left-col, .right-col, .trending-num {
+	display: inline-block;
+}	
+
+.left-col, .right-col {
+	font-size: 12px;
+	padding: 0 14px;
+}
+
+.right-col {
+	float: right;
+}
+
+.trending-price {
+	color: $gold;
+}
+
+.trending-msrp {
+	text-decoration: line-through;
+	color: $greytext;
+}

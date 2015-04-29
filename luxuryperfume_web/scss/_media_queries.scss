@@ -1,0 +1,47 @@
+// Media Queries Styles
+
+@media #{$small-up} { }
+@media #{$small-only} { 
+	body {
+		font-size: 9px !important;
+	}
+
+	.info-bar {
+		height: 30px !important;
+	}
+
+	.country-tag li {
+		font-size: 9px !important;
+	}
+	.country-tag li:nth-child(1), .country-tag li:nth-child(2) {
+		display: none;
+	}
+	
+	nav.main-navigation, .main-logo, .search-container {
+		display: none;
+	}
+
+	.mobile-navigation {
+		display: block !important;
+		background: transparent;
+		padding: 10px;
+
+		.mobile-logo {
+			width: 125px;
+		}
+	}
+
+
+}
+
+@media #{$medium-up} { }
+@media #{$medium-only} { }
+
+@media #{$large-up} { }
+@media #{$large-only} { }
+
+@media #{$xlarge-up} { }
+@media #{$xlarge-only} { }
+
+@media #{$xxlarge-up} { }
+@media #{$xxlarge-only} { }
